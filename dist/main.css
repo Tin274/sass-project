@@ -237,6 +237,7 @@ html {
 
 .motivation {
   margin-top: 2rem;
+  padding-bottom: 3rem;
 }
 
 .motivation__column-text {
@@ -357,6 +358,58 @@ html {
   z-index: 10;
   filter: grayscale(0%);
   transform: scale(1.05);
+}
+
+.tours {
+  background-color: #011820;
+  height: 30rem;
+  position: relative;
+}
+
+.tours::after, .tours::before {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  content: "Tame the wild";
+  position: absolute;
+  text-transform: uppercase;
+  color: #011820;
+  font-size: 10rem;
+  font-weight: bold;
+  text-shadow: 0 0 1px white;
+}
+
+@supports (-webkit-text-stroke: 1px rgba(255, 255, 255, 0.2)) or (text-stroke: 2px rgba(255, 255, 255, 0.2)) {
+  .tours::before {
+    -webkit-text-stroke: 2px rgba(255, 255, 255, 0.2);
+    text-stroke: 1px rgba(255, 255, 255, 0.2);
+    text-shadow: none;
+  }
+}
+
+@supports (-webkit-text-stroke: 1px transparent) or (text-stroke: 2px transparent) {
+  .tours::after {
+    -webkit-text-stroke: 2px transparent;
+    text-stroke: 1px transparent;
+    text-shadow: none;
+  }
+}
+
+.tours__container {
+  position: relative;
+  z-index: 1;
+}
+
+.tours__heading {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  font-size: 2rem;
+  text-align: center;
 }
 
 /*# sourceMappingURL=main.css.map */
